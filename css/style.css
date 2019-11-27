@@ -55,12 +55,14 @@ body{
   header li{
     float:left;
     display:inline;
-    padding: 0 20px 10px 20px;
+    padding: 10px 20px 10px 20px;
+    border: #e8491d 1px solid;
+    margin-bottom: 8%;
   }
   
   header #branding{
-    float:left;
-    margin-bottom: 5px;
+    float:center;
+    margin-bottom: 10px;
     border-bottom:#e8491d 3px solid;
   }
   
