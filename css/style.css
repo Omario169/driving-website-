@@ -280,7 +280,7 @@ body{
 
   .imgbanbtn-prev {
     left: 5px;
-    background-image: url(..images/arrow-left.png);
+    background-image: url(../images/arrow-left.png);
     background-size: 70%;
     background-position: center;
     background-repeat: no-repeat;
@@ -288,7 +288,7 @@ body{
 
   .imgbanbtn-next {
     right: 5px;
-    background-image: url(..images/arrow-right.png);
+    background-image: url(../images/arrow-right.png);
     background-size: 70%;
     background-position: center;
     background-repeat: no-repeat;
