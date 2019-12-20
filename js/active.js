@@ -12,6 +12,18 @@ var startBannerLoop = setInterval(function() {
     bannerLoop();
 }, bannerTimer);
 
+document.getElementById("main-banner").onmouseenter = function() {
+    clearInterval(startBannerLoop);
+}
+
+document.getElementById("main-banner").onmouseleave = function() {
+    startBannerLoop = setInterval(function() {
+        bannerLoop();
+    }, bannerTimer);
+}
+
+
+
 function bannerLoop() {
     if (bannerStatus === 1) {
         document.getElementById("imgban2").style.opacity = "0";
