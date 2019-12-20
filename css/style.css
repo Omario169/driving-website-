@@ -209,4 +209,38 @@ body{
       margin-bottom:5px;
     }
   }
+
+  body {
+    background-color: #f3f3f3;
+  }
+
+  .main-banner {
+    margin: 0 auto;
+    width: 1200px;
+    height: 400px;
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .main-banner #imgban3 {
+    background-image: url(images/banner3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .main-banner #imgban2 {
+    background-image: url(images/banner2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .main-banner #imgban1 {
+    background-image: url(images/banner1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
   
