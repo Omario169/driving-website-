@@ -1,153 +1,96 @@
-//variable keeps track of which image is the current image 
-var bannerStatus = 1;
 
-//timer for banner
-var bannerTimer = 4000;
 
-window.onload = function () {
-    bannerLoop();
+  //attempt number 3 
+
+  
+var slideIndex,slides,dots,captionText;
+function initGallery(){
+    slideIndex = 0;
+    slides=document.getElementsByClassName("imageHolder");
+    slides[slideIndex].style.opacity=1;
+
+    captionText=document.querySelector(".captionTextHolder .captionText");
+    captionText.innerText=slides[slideIndex].querySelector(".captionText").innerText;
+
+    //disable nextPrevBtn if slide count is one
+    if(slides.length<2){
+        var nextPrevBtns=document.querySelector(".leftArrow,.rightArrow");
+        nextPrevBtns.style.display="none";
+        for (i = 0; i < nextPrevBtn.length; i++) {
+            nextPrevBtn[i].style.display="none";
+        }
+    }
+
+    //add dots
+    dots=[];
+    var dotsContainer=document.getElementById("dotsContainer"),i;
+    for (i = 0; i < slides.length; i++) {
+        var dot=document.createElement("span");
+        dot.classList.add("dots");
+        dotsContainer.append(dot);
+        dot.setAttribute("onclick","moveSlide("+i+")");
+        dots.push(dot);
+    }
+    dots[slideIndex].classList.add("active");
 }
-
-var startBannerLoop = setInterval(function() {
-    bannerLoop();
-}, bannerTimer);
-
-document.getElementById("main-banner").onmouseenter = function() {
-    clearInterval(startBannerLoop);
+initGallery();
+function plusSlides(n) {
+    moveSlide(slideIndex+n);
 }
+function moveSlide(n){
+    var i;
+    var current,next;
+    var moveSlideAnimClass={
+          forCurrent:"",
+          forNext:""
+    };
+    var slideTextAnimClass;
+    if(n>slideIndex) {
+        if(n >= slides.length){n=0;}
+        moveSlideAnimClass.forCurrent="moveLeftCurrentSlide";
+        moveSlideAnimClass.forNext="moveLeftNextSlide";
+        slideTextAnimClass="slideTextFromTop";
+    }else if(n<slideIndex){
+        if(n<0){n=slides.length-1;}
+        moveSlideAnimClass.forCurrent="moveRightCurrentSlide";
+        moveSlideAnimClass.forNext="moveRightPrevSlide";
+        slideTextAnimClass="slideTextFromBottom";
+    }
 
-document.getElementById("main-banner").onmouseleave = function() {
-    startBannerLoop = setInterval(function() {
-        bannerLoop();
-    }, bannerTimer);
+    if(n!=slideIndex){
+        next = slides[n];
+        current=slides[slideIndex];
+        for (i = 0; i < slides.length; i++) {
+            slides[i].className = "imageHolder";
+            slides[i].style.opacity=0;
+            dots[i].classList.remove("active");
+        }
+        current.classList.add(moveSlideAnimClass.forCurrent);
+        next.classList.add(moveSlideAnimClass.forNext);
+        dots[n].classList.add("active");
+        slideIndex=n;
+        captionText.style.display="none";
+        captionText.className="captionText "+slideTextAnimClass;
+        captionText.innerText=slides[n].querySelector(".captionText").innerText;
+        captionText.style.display="block";
+    }
+
 }
-//initialise new function here 
-document.getElementById("imgbanbtn-prev").onclick = function() {
-    if (bannerStatus === 1) {
-        bannerStatus = 2;
-    }
-    else if (bannerStatus === 2) {
-        bannerStatus = 3;
-    }
-    else if (bannerStatus === 3) {
-        bannerStatus = 1;
-    }
-    bannerLoopRev();
-    bannerLoop();
+var timer=null;
+function setTimer(){
+    timer=setInterval(function () {
+        plusSlides(1) ;
+    },3000);
 }
-
-document.getElementById("imgbanbtn-next").onclick = function() {
-    bannerLoop();
-}
-
-
-
-function bannerLoop() {
-    if (bannerStatus === 1) {
-        document.getElementById("imgban2").style.opacity = "0";
-
-        setTimeout(function() {
-            document.getElementById("imgban1").style.right = "0px";
-            document.getElementById("imgban1").style.zIndex = "1000";
-            document.getElementById("imgban2").style.right = "-1200px";
-            document.getElementById("imgban2").style.zIndex = "1500";
-            document.getElementById("imgban3").style.right = "1200px";
-            document.getElementById("imgban3").style.zIndex = "500";
-        }, 500);
-        setTimeout(function() {
-
-             document.getElementById("imgban2").style.opacity = "1";
-            }, 1000);
-        bannerStatus = 2;
+setTimer();
+function playPauseSlides() {
+    var playPauseBtn=document.getElementById("playPause");
+    if(timer==null){
+        setTimer();
+        playPauseBtn.style.backgroundPositionY="0px"
+    }else{
+        clearInterval(timer);
+        timer=null;
+        playPauseBtn.style.backgroundPositionY="-33px"
     }
-    else if (bannerStatus === 2) {
-        document.getElementById("imgban3").style.opacity = "0";
-
-        setTimeout(function() {
-            document.getElementById("imgban2").style.right = "0px";
-            document.getElementById("imgban2").style.zIndex = "1000";
-            document.getElementById("imgban3").style.right = "-1200px";
-            document.getElementById("imgban3").style.zIndex = "1500";
-            document.getElementById("imgban1").style.right = "1200px";
-            document.getElementById("imgban1").style.zIndex = "500";
-        }, 500);
-        setTimeout(function() {
-
-             document.getElementById("imgban3").style.opacity = "1";
-            }, 1000);
-        bannerStatus = 3;
-    }
-    else if (bannerStatus === 3) {
-        document.getElementById("imgban1").style.opacity = "0";
-
-        setTimeout(function() {
-            document.getElementById("imgban3").style.right = "0px";
-            document.getElementById("imgban3").style.zIndex = "1000";
-            document.getElementById("imgban1").style.right = "-1200px";
-            document.getElementById("imgban1").style.zIndex = "1500";
-            document.getElementById("imgban2").style.right = "1200px";
-            document.getElementById("imgban2").style.zIndex = "500";
-        }, 500);
-        setTimeout(function() {
-
-             document.getElementById("imgban1").style.opacity = "1";
-            }, 1000);
-        bannerStatus = 1;
-    }
-    
-}
-
-function bannerLoopRev() {
-    if (bannerStatus === 1) {
-        document.getElementById("imgban3").style.opacity = "0";
-
-        setTimeout(function() {
-            document.getElementById("imgban3").style.left = "0px";
-            document.getElementById("imgban3").style.zIndex = "1000";
-            document.getElementById("imgban2").style.left = "-1200px";
-            document.getElementById("imgban2").style.zIndex = "1500";
-            document.getElementById("imgban1").style.left = "1200px";
-            document.getElementById("imgban1").style.zIndex = "500";
-        }, 500);
-        setTimeout(function() {
-
-             document.getElementById("imgban3").style.opacity = "1";
-            }, 1000);
-        bannerStatus = 3;
-    }
-    else if (bannerStatus === 2) {
-        document.getElementById("imgban1").style.opacity = "0";
-
-        setTimeout(function() {
-            document.getElementById("imgban1").style.left = "0px";
-            document.getElementById("imgban1").style.zIndex = "1000";
-            document.getElementById("imgban2").style.left = "-1200px";
-            document.getElementById("imgban2").style.zIndex = "1500";
-            document.getElementById("imgban3").style.left = "1200px";
-            document.getElementById("imgban3").style.zIndex = "500";
-        }, 500);
-        setTimeout(function() {
-
-             document.getElementById("imgban1").style.opacity = "1";
-            }, 1000);
-        bannerStatus = 1;
-    }
-    else if (bannerStatus === 3) {
-        document.getElementById("imgban2").style.opacity = "0";
-
-        setTimeout(function() {
-            document.getElementById("imgban2").style.left= "0px";
-            document.getElementById("imgban2").style.zIndex = "1000";
-            document.getElementById("imgban1").style.left = "-1200px";
-            document.getElementById("imgban1").style.zIndex = "1500";
-            document.getElementById("imgban3").style.left = "1200px";
-            document.getElementById("imgban3").style.zIndex = "500";
-        }, 500);
-        setTimeout(function() {
-
-             document.getElementById("imgban2").style.opacity = "1";
-            }, 1000);
-        bannerStatus = 2;
-    }
-    
 }
