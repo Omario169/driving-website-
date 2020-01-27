@@ -22,18 +22,21 @@
         crossorigin="anonymous"
       />
       <link rel="stylesheet" href="style.css" />
+      <link href="https://fonts.googleapis.com/css?family=Hind&display=swap" rel="stylesheet">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
     </head>
     <body>
         <header>
             <div class="container">
                 <nav class="navbar">
-                  <a class="site-brand" href="index.html">Geeky Shows</a>
+                  <a class="site-brand" href="index.html"><i>Abul's</i></a>
                   <ul>
                     <li><a href="#">Home</a></li>
+                    <li><a href="#">Areas</a></li>
+                    <li><a href="#">Prices</a></li>
                     <li><a href="#">Services</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Blog</a></li>
                     <li><a href="#">Contact</a></li>
+                    <li><a href="#">About</a></li>
                   </ul>
                 </nav>
           
@@ -101,13 +104,7 @@
 
         </section>
 
-        <section id="newsletter">
-            <div class="container">
-                <h1>Take the first step and contact today!</h1>
-                <h2 class="details">TEL: 07542616771<br> EMAIL: abulbasher@gmail.com</h2>
-                
-            </div>
-          </section>
+       
 
           <section id="boxes">
             <div class="container">
@@ -129,12 +126,89 @@
                     </div>
           </section>
 
-          <footer>
-              <p>Omar Faruk Web Design, Copyright &copy; 2019 </p>
-          </footer>
+     
+
+         <!-- Testimonial -->
+         <div class="testimonial-section">
+            <div class="inner-width">
+              <h1>Past students</h1>
+              <div class="testimonial-pics">
+                <img src="images/p1.png" alt="test-1" class="active">
+                <img src="images/p2.png" alt="test-2">
+                <img src="images/p3.png" alt="test-3">
+                <img src="images/p4.png" alt="test-4">
+              </div>
+      
+              <div class="testimonial-contents">
+                <div class="testimonial active" id="test-1">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab consequatur et adipisci ut, impedit cumque, similique, eum tenetur, numquam eligendi aliquid. Nulla sit, cupiditate corporis labore, modi natus officiis asperiores!</p>
+                  <span class="description">George</span>
+                </div>
+      
+                <div class="testimonial" id="test-2">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elimet, consectetur adipisicing eli t. Ab consequatur et adipisci ut, impedit cumque, similique, eum tenetur, numquam eligendi aliquid. Nulla sit, cupiditate corporis labore, modi natus officiis asperiores!</p>
+                  <span class="description">Ibrahim</span>
+                </div>
+      
+                <div class="testimonial" id="test-3">
+                  <p>Lorem  similique, eum tenetur, numquam eligendi aliquid. Nulla sit, cupiditate corporis labore, modi natus officiis asperiores!</p>
+                  <span class="description">Salma</span>
+                </div>
+      
+                <div class="testimonial" id="test-4">
+                  <p>Lorem ipsum dolorng elit. Ab consequatur et adipisci ut, impedit cumque, similique, eum tenetur, numquam eligendi aliquid. Nulla sit, cupiditate corporis labore, modi natus officiis asperiores!</p>
+                  <span class="description">Jess</span>
+                </div>
+              </div>
+            </div>
+          </div>
+         <!-- Testimonial -->
+
+          <footer class="footer">
+            <div class="footer__text container">
+               
+                <p>
+                    &copy; Copyright 2019 Your Website
+                </p>
+                <hr class="footer__hr">
+            </div>
+            <div class="footer__sections container">
+                <div class="footer__section">
+                    <span class="footer__title">Find Out More</span>
+                    <a href="#" class="footer__link">Home</a>
+                    <a href="#" class="footer__link">Driving Lesson Prices</a>
+                    <a href="#" class="footer__link">Driving Areas</a>
+                </div>
+                <div class="footer__section">
+                    <span class="footer__title">Course Information</span>
+                    <a href="#" class="footer__link">Driving Lessons</a>
+                    <a href="#" class="footer__link">Block Bookings</a>
+                    <a href="#" class="footer__link">Intensive Courses</a>
+                    <a href="#" class="footer__link">Under 17 Lessons</a>
+                    <a href="#" class="footer__link">Pass Plus Course</a>
+                    <a href="#" class="footer__link">Refresher Lessons</a>
+                </div>
+                <div class="footer__section">
+                    <span class="footer__title">Contact for info</span>
+                    <a href="#" class="footer__link">Bookings/Enquiries</a>
+                    <a href="#" class="footer__link">About Abul</a>
+                   
+                </div>
+              
+            </div>
+        </footer>
 
 
     <script src="js/active.js">  </script>
+    <script type="text/javascript">
+        $('.testimonial-pics img').click(function(){
+          $(".testimonial-pics img").removeClass("active");
+          $(this).addClass("active");
+  
+          $(".testimonial").removeClass("active");
+          $("#"+$(this).attr("alt")).addClass("active");
+        });
+      </script>
 
     </body>
 

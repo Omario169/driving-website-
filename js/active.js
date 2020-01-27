@@ -95,6 +95,7 @@ function playPauseSlides() {
     }
 }
 
+//This is for the nav bar
 function showMenu() {
     var b = document.getElementById("bar");
     var t = document.getElementById("times");
@@ -112,3 +113,6 @@ function showMenu() {
     t.style.display = "none";
     m.style.display = "none";
   }
+
+// Testomonial 
+
