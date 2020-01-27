@@ -7,28 +7,54 @@
         <meta name="viewport" content="width=device-width">
         <meta name="Driving website" contents="affordableand efficient driving instructor located in the Greater Manchester area">
         <meta name="author" content="Omar Faruk">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Abul Basher Driving | About</title>
         <script
         src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
         crossorigin="anonymous"></script>
         <link rel="stylesheet" href="./css/style.css">
+        <link
+        rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+        crossorigin="anonymous"
+      />
+      <link rel="stylesheet" href="style.css" />
     </head>
     <body>
         <header>
             <div class="container">
-                <div id="branding">
-                    <h1> <img src="images/logo.png" alt="logo" style="width:100px;height:100px;"><span class="highlight">ABUL</span> DRIVING SCHOOL</h1>
-                </div>
-
-                <nav>
-                    <ul>
-                        <li class="current"><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                    </ul>
+                <nav class="navbar">
+                  <a class="site-brand" href="index.html">Geeky Shows</a>
+                  <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                  </ul>
                 </nav>
-            </div>
+          
+                <nav class="navbar-mob">
+                  <div class="hamburger-btn">
+                    <i class="fas fa-bars" id="bar" onclick="showMenu()"></i>
+                    <i class="fas fa-times" id="times" onclick="closeMenu()"></i>
+                  </div>
+          
+                  <ul id="mob-menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                  </ul>
+                </nav>
+                <div style="width:200px;">
+                  
+                </div>
+              </div>
 
         
 
@@ -36,7 +62,7 @@
 
         <section id="showcase">
             <div class="container" id="sell">
-              <h1>EXPERIENCED TEACHER</h1> 
+              <h1>Reshma and Shamim</h1> 
               <p class="convince">With years of experience and a high pass rate Abul driving school has been reccomended by countless students in the 
                   Oldham/Tameside area.</p>
             <p class="convince">I gaurentee you excellent one to one coaching at a competitive price. My passion is driving and I want to pass it onto you!</p>
@@ -45,39 +71,7 @@
 
 
 
-        <div class="main-banner" id="main-banner">
-            <div class="imgbanbtn imgbanbtn-prev" id="imgbanbtn-prev"></div>
-            <div class="imgban" id="imgban3">
-                <div class="imgban-box">
-                    <h2>Stay safe</h2>
-                    <p>the most complete guide</p>
-                </div>
-            </div>
-            <div class="imgban" id="imgban2">
-                <div class="imgban-box">
-                    <h2>Stay safe</h2>
-                    <p>the most complete guide</p>
-                </div>
-            </div>
-            <div class="imgban" id="imgban1">
-                <div class="imgban-box">
-                    <h2>Stay safe</h2>
-                    <p>the most complete guide</p>
-                </div>
-            </div>
-            <div class="imgbanbtn imgbanbtn-next" id="imgbanbtn-next"></div>
-
-        </div>
-
-        <div class="slide-viewer">
-            <div class="slide-group">
-                <div class="slide slide-1"></div>
-                <div class="slide slide-2"></div>
-                <div class="slide slide-3"></div>
-                <div class="slide slide-4"></div>
-            </div>
-        </div>
-        <div class="slide-buttons"></div>
+        
 
         <div class="galleryContainer">
             <div class="slideShowContainer">
