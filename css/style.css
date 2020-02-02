@@ -8,7 +8,7 @@ body{
     font: 15px/1.5 sans-serif, Helvetica,sans-serif;
     padding:0;
     margin:0;
-    background-color:#f4f4f4;
+    background-color:#a59e9e;
     width:920px;/*change the value to suite ur need*/
   margin:0 auto;/*this will center ur content*/
   }
@@ -31,7 +31,7 @@ body{
   }
 
   #sell {
-    background-color: #e8491d;
+    background-color: #2a59a0;
     padding-top: 0px;
   }
   
@@ -235,6 +235,18 @@ body{
     font-size: 0.85rem;
     padding: 20px 0;
     line-height: 1.6;
+    position: relative;
+}
+
+#footerContact {
+    font-size: 0.85rem;
+    padding: 20px 0;
+    line-height: 1.6;
+    position: relative;
+    clear: both;
+    margin-top: 600px ;
+    height: 100px;
+
 }
 
 .footer__text,
@@ -334,7 +346,12 @@ body{
     position: relative;
   }
 
-
+#bannerAbul {
+  margin-top: 1.5%;
+  margin-bottom: 0.5%;
+  width: 920px;
+  height: 240px;
+}
 
 
 
@@ -721,4 +738,42 @@ body{
   text-transform: uppercase;
   letter-spacing: 4px;
   font-size: 15px;
+}
+
+/* This is the CSS for the contact form */
+.wrapper{
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 650px;
+  width: 100%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 4px 4px 2px rgb(40, 58, 219); 
+}
+
+.wrapper h2{
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #332902;
+}
+
+.wrapper .input_field{
+  margin-bottom: 10px;
+}
+
+.wrapper .input_field input[type="text"],
+.wrapper textarea{
+  border: 1px solid #e0e0e0;
+  width: 100%;
+  padding: 10px;
+}
+
+.wrapper textarea{
+  resize: none;
+  height: 80px;
 }
