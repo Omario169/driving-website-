@@ -4,11 +4,15 @@
   box-sizing: border-box;
 }
 
+#abulLogo {
+  color: #464866;
+}
+
 body{
     font: 15px/1.5 sans-serif, Helvetica,sans-serif;
     padding:0;
     margin:0;
-    background-color:#a59e9e;
+    background-color:#25274d;
     width:920px;/*change the value to suite ur need*/
   margin:0 auto;/*this will center ur content*/
   }
@@ -31,7 +35,7 @@ body{
   }
 
   #sell {
-    background-color: #2a59a0;
+    margin-bottom: 7px;
     padding-top: 0px;
   }
   
@@ -57,7 +61,8 @@ body{
   /* Header **/
   .navbar,
 .navbar-mob {
-  background-color: #f06595;
+  background-color: #aaabb8;
+  margin-top: 10px;
 }
 
 .navbar > a {
@@ -102,7 +107,7 @@ body{
 
 .navbar > ul > li:hover,
 .navbar-mob > ul > li:hover {
-  background-color: grey;
+  background-color: #29648a;
 }
 
 .navbar::after {
@@ -334,7 +339,7 @@ body{
   }
 
   body {
-    background-color: #f3f3f3;
+    background-color:#25274d;
   }
 
   .main-banner {
@@ -679,7 +684,7 @@ body{
 /* testomonial  */
 
 .testimonial-section{
-  background: #f1f1f1;
+  background-color:#25274d;
   padding: 80px 0;
   text-align: center;
 }
@@ -730,14 +735,20 @@ body{
 }
 
 .testimonial p{
-  color: #5c5c5c;
+  color: #aaaaaa;
   margin-bottom: 20px;
+}
+
+#pastStudents {
+  color: #aaaaaa;
+  
 }
 
 .testimonial .description{
   text-transform: uppercase;
   letter-spacing: 4px;
   font-size: 15px;
+  color: #aaaaaa;
 }
 
 /* This is the CSS for the contact form */
@@ -776,4 +787,30 @@ body{
 .wrapper textarea{
   resize: none;
   height: 80px;
+}
+
+.btnInput {
+  box-shadow:inset 0px 1px 0px 0px #54a3f7;
+	background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
+	background-color:#007dc1;
+	border-radius:3px;
+	border:1px solid #124d77;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #154682;
+
+}
+
+.btnInput:hover {
+	background:linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
+	background-color:#0061a7;
+}
+.btnInput:active {
+	position:relative;
+	top:1px;
 }
