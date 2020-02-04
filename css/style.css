@@ -779,10 +779,11 @@ body{
 /* This is the CSS for the contact form */
 .wrapper{
   position: absolute;
-  top: 100%;
+  top: 93%;
   left: 50%;
   transform: translate(-50%,-50%);
-  max-width: 650px;
+  
+  max-width: 950px;
   width: 100%;
   background: #fff;
   padding: 25px;
