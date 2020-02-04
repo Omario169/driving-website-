@@ -131,17 +131,17 @@ function validate(){
     error_message.style.padding = "10px";
     
     var text;
-    if(name.length < 5){
+    if(name.length < 2){
       text = "Please Enter valid Name";
       error_message.innerHTML = text;
       return false;
     }
-    if(subject.length < 10){
-      text = "Please Enter Correct Subject";
+    if(subject.length < 5){
+      text = "The subject must be more than 5 characters";
       error_message.innerHTML = text;
       return false;
     }
-    if(isNaN(phone) || phone.length != 10){
+    if(isNaN(phone) || phone.length < 10){
       text = "Please Enter valid Phone Number";
       error_message.innerHTML = text;
       return false;
@@ -151,8 +151,8 @@ function validate(){
       error_message.innerHTML = text;
       return false;
     }
-    if(message.length <= 140){
-      text = "Please Enter More Than 140 Characters";
+    if(message.length <= 20){
+      text = "Please Enter More Than 20 Characters";
       error_message.innerHTML = text;
       return false;
     }
