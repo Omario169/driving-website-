@@ -69,6 +69,16 @@ body{
     padding-top: 10px;
     padding-bottom: 10px;
   }
+
+  .mainInfo {
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  #boxInfo {
+
+  }
   
   /* Header **/
   .navbar,
@@ -207,14 +217,15 @@ body{
   
   /* Boxes */
   #boxes{
-    margin-top:20px;
+    margin-top:40px;
+    border-top: #124d77;
   }
   
   #boxes .box{
     float:left;
     text-align: center;
     width:30%;
-    padding:10px;
+    padding:20px;
   }
   
   #boxes .box img{
@@ -503,6 +514,8 @@ body{
   box-shadow: 0px 0px 3px 1px #00000078;
   padding: 10px;
   box-sizing: border-box;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 .galleryContainer .slideShowContainer{
   width: 100%;
@@ -833,6 +846,12 @@ body{
   margin-top: 20px;
 }
 
+#boxInfo {
+  border: 2px solid rgb(19, 107, 167);
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
 
 table {
   margin-left: 50px;
@@ -889,4 +908,24 @@ h1, h3 {
 
 p {
   color: white;
+}
+
+li {
+  list-style: none;
+  padding-bottom: 5px;
+}
+
+#abulInfo {
+  border: 2px solid rgb(19, 107, 167);
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-left: 150px;
+  margin-right: 150px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+}
+
+.advert {
+  margin-left: 100px;
 }

@@ -6,8 +6,23 @@
         <meta name="viewport" content="width=device-width">
         <meta name="Driving website" contents="affordableand efficient driving instructor located in the Greater Manchester area">
         <meta name="author" content="Omar Faruk">
-        <title>Abul Basher Driving | Services</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Abul Basher Driving | About</title>
+        <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
         <link rel="stylesheet" href="./css/style.css">
+        <link
+        rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+        crossorigin="anonymous"
+      />
+      
+      <link href="https://fonts.googleapis.com/css?family=Hind&display=swap" rel="stylesheet">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
     </head>
     <body>
         <header>
@@ -47,44 +62,75 @@
 
         </header>
 
-        <div class="container" id="sell">
-            <!-- <h1>Reshma and Shamim</h1> 
-            <p class="convince">With years of experience and a high pass rate Abul driving school has been reccomended by countless students in the 
-                Oldham/Tameside area.</p>
-          <p class="convince">I gaurentee you excellent one to one coaching at a competitive price. My passion is driving and I want to pass it onto you!</p> -->
-          <img src="images/banner.png" width="920" height="240" alt="Computer Hope" id="bannerAbul">     
-          </div>
+        <section id="showcase">
+            <div class="container" id="sell">
+              <!-- <h1>Reshma and Shamim</h1> 
+              <p class="convince">With years of experience and a high pass rate Abul driving school has been reccomended by countless students in the 
+                  Oldham/Tameside area.</p>
+            <p class="convince">I gaurentee you excellent one to one coaching at a competitive price. My passion is driving and I want to pass it onto you!</p> -->
+            <img src="images/banner.png"  alt="Computer Hope" id="bannerAbul">     
+            </div>
 
+    </section>
 
+       
 
+<section id="lessonPrices">
+    <h1 class="pricesInfo">Driving School Teaching Areas</h1>
+    <p class="pricesInfo">I have a good knowledge of the local roads and offer driving lessons across Pinner and the surrounding towns.</p>
+    <p class="pricesInfo">Below is a detailed list of the towns my Driving School covers:</p>
+    <div class="lessonPrice">
+        <h1 class="pricesInfo"></h1>
         
+        <table class="paleBlueRows">
+            <thead>
+            <tr>
+            <th>Areas</th>
+            <th>Postcode</th>
+            
+            </tr>
+            </thead>
+           
+            <tbody>
+            <tr>
+            <td>£25</td>
+            <td>£33</td>
+            
+            </tr>
+            <tr>
+                <td>£25</td>
+                <td>£33</td>
+                
+                </tr>
 
-          <div class="wrapper">
-            <h2>Contact me</h2>
-            <div id="error_message"></div>
-            <form id="myform" onsubmit="return validate();">
-              <div class="input_field">
-                  <input type="text" placeholder="Name" id="name">
-              </div>
-              <div class="input_field">
-                  <input type="text" placeholder="Subject" id="subject">
-              </div>
-              <div class="input_field">
-                  <input type="text" placeholder="Phone" id="phone">
-              </div>
-              <div class="input_field">
-                  <input type="text" placeholder="Email" id="email">
-              </div>
-              <div class="input_field">
-                  <textarea placeholder="Message" id="message"></textarea>
-              </div>
-              <div class="btn">
-                  <input class="btnInput" type="submit">
-              </div>
-            </form>
-          </div>
+                <tr>
+                    <td>£25</td>
+                    <td>£33</td>
+                    
+                    </tr>
+          
+            </tbody>
+        </table>
 
-          <footer id="footerContact">
+
+
+</section>
+
+<h1 class="pricesInfo">Outside the areas listed above</h1>
+
+<p class="pricesInfo">If you live close to the area but outside of the postcodes shown above, my Driving School may still be able to offer lessons. 
+    
+    
+    <a href="contact.html">Please send me a driving lesson enquiry.</a>
+</p>
+
+
+
+     
+
+     
+
+          <footer class="footer">
             <div class="footer__text container">
                
                 <p>
@@ -106,7 +152,7 @@
                     <a href="#" class="footer__link">Intensive Courses</a>
                     <a href="#" class="footer__link">Under 17 Lessons</a>
                     <a href="#" class="footer__link">Pass Plus Course</a>
-                    <a href="#" class="footer__link">Refresher Lessons</a>
+                    
                 </div>
                 <div class="footer__section">
                     <span class="footer__title">More Information</span>
@@ -124,7 +170,18 @@
               
             </div>
         </footer>
-          <script src="js/active.js">  </script>
+
+
+    <script src="js/active.js">  </script>
+    <script type="text/javascript">
+        $('.testimonial-pics img').click(function(){
+          $(".testimonial-pics img").removeClass("active");
+          $(this).addClass("active");
+  
+          $(".testimonial").removeClass("active");
+          $("#"+$(this).attr("alt")).addClass("active");
+        });
+      </script>
 
     </body>
 
