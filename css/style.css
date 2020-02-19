@@ -86,7 +86,7 @@ body{
   background-color: #aaabb8;
   margin-top: 10px;
 }
-
+/* This is for the name of the site */
 .navbar > a {
   color: #fff;
   font-size: 30px;
@@ -94,7 +94,7 @@ body{
   padding: 10px 10px 5px 50px;
   float: left;
 }
-
+/* menu items */
 .navbar > ul {
   list-style: none;
   float: right;
@@ -104,6 +104,7 @@ body{
   list-style: none;
 }
 
+/* This moves the menu items to a left right format */
 .navbar > ul > li {
   display: inline-block;
   line-height: 60px;
@@ -541,6 +542,7 @@ body{
 .galleryContainer .slideShowContainer .imageHolder{
   width: 100%;
   height: 100%;
+  /* position images on top of one another  */
   position: absolute;
   opacity: 0;
 }
@@ -558,6 +560,7 @@ body{
   position: absolute;
   left: 0;
   z-index: 1;
+  
   transition: background 0.5s;
   height: 72px;
   top: 50%;
@@ -574,6 +577,7 @@ body{
   border-bottom-left-radius: 10px;
 }
 .galleryContainer .slideShowContainer .leftArrow:hover,.galleryContainer .slideShowContainer .rightArrow:hover{
+  /* as we hover background color of arrow changes  */
   background: #000000a8;
   cursor: pointer;
 }
@@ -591,6 +595,8 @@ body{
   top: 0;
   bottom: 0;
 }
+
+/* position arrows to correct position */
 .galleryContainer .arrow.arrowLeft{
   transform: rotateZ(-135deg);
 }
@@ -657,6 +663,8 @@ body{
   animation-timing-function: linear;
   animation-fill-mode:forwards;
 }
+
+/* animations for current and next slide */
 @keyframes moveLeftCurrent {
   from {margin-left: 0;opacity: 1;}
   to {margin-left: -100%;opacity: 1;}
@@ -679,6 +687,8 @@ body{
   animation-timing-function: linear;
   animation-fill-mode:forwards;
 }
+
+/* animations but for opposite direction */
 @keyframes moveRightCurrent {
   from {margin-left: 0;opacity: 1;}
   to {margin-left: 100%;opacity: 1;}
@@ -687,6 +697,8 @@ body{
   from {margin-left: -100%;opacity: 1;}
   to {margin-left: 0%;opacity: 1;}
 }
+
+/* when going from previous text coomes from bottom, and vice versa for text coming from top  */
 .slideTextFromBottom {
   animation-name: slideTextFromBottom;
   animation-duration: 0.7s;
