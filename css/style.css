@@ -791,7 +791,7 @@ body{
 /* This is the CSS for the contact form */
 .wrapper{
   position: absolute;
-  top: 93%;
+  top: 85%;
   left: 50%;
   transform: translate(-50%,-50%);
   
