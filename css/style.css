@@ -13,7 +13,7 @@ body{
     padding:0;
     margin:0;
     background-color:#25274d;
-    width:920px;/*change the value to suite ur need*/
+    width:70%;/*change the value to suite ur need*/
   margin:0 auto;/*this will center ur content*/
   }
   
@@ -64,8 +64,8 @@ body{
   }
 
   .pricesInfo {
-    padding-left: 50px;
-    padding-right: 100px;
+    padding-left: 10%;
+    padding-right: 10%;
     padding-top: 10px;
     padding-bottom: 10px;
   }
@@ -273,7 +273,7 @@ body{
     line-height: 1.6;
     position: relative;
     clear: both;
-    margin-top: 600px ;
+    margin-top: 80% ;
     height: 100px;
 
 }
@@ -376,10 +376,10 @@ body{
   }
 
 #bannerAbul {
-  margin-top: 1.5%;
+  margin-top: 2%;
   margin-bottom: 0.5%;
-  width: 920px;
-  height: 240px;
+  width: 100%;
+  height: 200%;
 }
 
 
@@ -801,6 +801,7 @@ body{
   padding: 25px;
   border-radius: 5px;
   box-shadow: 4px 4px 2px rgb(40, 58, 219); 
+  margin-bottom: 200%;
 }
 
 .wrapper h2{
@@ -854,9 +855,11 @@ body{
 }
 
 .lessonPrice {
-  border: 2px solid rgb(19, 107, 167);
-  border-radius: 5px;
-  margin-top: 20px;
+  
+  border-radius: 20%;
+  margin-top: 10px;
+  width:110%;
+  margin-left: 10%
 }
 
 #boxInfo {
@@ -867,7 +870,7 @@ body{
 
 
 table {
-  margin-left: 50px;
+  margin-left: 15%;
   margin-top: 20px;
   margin-bottom: 30px;
 }
@@ -875,7 +878,7 @@ table {
 table.paleBlueRows {
   font-family: "Times New Roman", Times, serif;
   border: 1px solid #FFFFFF;
-  width: 750px;
+  width: 40%;
   height: 150px;
   text-align: center;
   border-collapse: collapse;
@@ -931,9 +934,9 @@ li {
 #abulInfo {
   border: 2px solid rgb(19, 107, 167);
   border-radius: 5px;
-  margin-top: 20px;
-  margin-left: 150px;
-  margin-right: 150px;
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
   padding-top: 10px;
   padding-bottom: 10px;
 
