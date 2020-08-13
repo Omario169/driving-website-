@@ -790,7 +790,7 @@ body{
 
 /* This is the CSS for the contact form */
 .wrapper{
-  position: absolute;
+  /* position: absolute;
   top: 85%;
   left: 50%;
   transform: translate(-50%,-50%);
@@ -801,8 +801,7 @@ body{
   padding: 25px;
   border-radius: 5px;
   box-shadow: 4px 4px 2px rgb(40, 58, 219); 
-  margin-bottom: 200%;
-}
+  margin
 
 .wrapper h2{
   text-align: center;
