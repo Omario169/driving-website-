@@ -826,6 +826,10 @@ body{
   resize: none;
   height: 80px;
 }
+	
+#error_message {
+  color: #f80a0a;;
+}
 
 .btnInput {
   box-shadow:inset 0px 1px 0px 0px #54a3f7;
