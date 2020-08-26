@@ -90,7 +90,7 @@
               $mailFrom = $_POST['mail'];
               $message = $_POST['message'];
 
-              $mailTo = "ofaruk0169@gmail.com";
+              $mailTo = "abuldrivingschool@abuldriving.site";
               $headers = "From: ".mailFrom;
               $txt = "You have recieved an email from ".$name.".\n\n".$message;
 
