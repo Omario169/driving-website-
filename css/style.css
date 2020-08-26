@@ -950,3 +950,25 @@ li {
 .advert {
   margin-left: 100px;
 }
+
+
+/* media queries  */
+
+@media all and (max-width: 700px) {
+
+  .galleryContainer {
+    height: 400px;
+  }
+  
+
+}
+
+@media all and (max-width: 500px) {
+
+  .galleryContainer {
+    height: 200px;
+  }
+  
+
+}
+
